@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="signup.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Welcome To Kerala Tourism</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="districts.html">Districts</a></li>
+                        <li><a href="signin.html">Sign In</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class=row>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <div id="ui">
+                    <h2 class="text-center">Sign Up</h2>
+                    <br>
+                    <form class="form-group text-center" action="index.html" method="POST" onsubmit="return validate1() && validate2()">
+                        <label>Username</label>
+                        <input type="text" pattern="([A-Za-z0-9\.\-]+)?" title="Invalid email" name="fnname"
+                            class="form-control" placeholder="Enter your Username.." id="username" maxlength="20"
+                            required>
+                        <br>
+                        <label>E-mail</label>
+                        <input type="text" autocomplete="off" class="form-control" id="email"
+                            placeholder="Enter your E-mail.."
+                            pattern="([A-Za-z0-9\.\-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?"
+                            title="Invalid email" required />
+                        <label for="error" id="error"></label>
+                        <br>
+                        <label>Phone Number</label>
+                        <input placeholder="Enter your Phone number.."
+                            pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" class="form-control"
+                            autocomplete="off" title="Invalid number" id="phone" required />
+                        <br>
+                        <label>Password</label>
+                        <input name="password" class="form-control" id="password" type="password" size="15" maxlength=30
+                            placeholder="Enter your Password.." required onkeyup="return passwordChanged();" />
+                        <span id="strength"> : </span>
+                        <br><br>
+
+                        <input type="submit" name="submit" value="Submit" class="btn btn-primary btn-block btn-lg">
+                        <br><br>
+                        <div class="text-center mb-2">
+                            Already have an account?
+                            <a href="signin.html" class="register-link">Sign In</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+
+    <br><br><br>
+    <footer class="footer">
+        <div class="outer-footer">
+            Copyright &copy; Kerala Tourism. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="./main.js"></script>
+    <script src="./phonevalidation.js"></script>
+
+</body>
+
+</html>
